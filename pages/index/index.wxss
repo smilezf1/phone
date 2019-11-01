@@ -1,0 +1,124 @@
+/**index.wxss**/
+page{
+  height:100%;
+  padding-top:70rpx;
+}
+.navigationBarTitle{
+  margin-bottom:25rpx;
+  color:#000;
+  padding-left:14rpx;
+  letter-spacing:6rpx;
+}
+.i-top {
+  background: #f7444a;
+  padding: 20rpx 30rpx 0rpx 30rpx;
+}
+
+.i-top:after {
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+
+.i-top-left {
+  float: left;
+  color: white;
+  font-size: 28rpx;
+}
+
+.i-top-right {
+  position: relative;
+}
+
+.i-top-right .search {
+  width: 40rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.i-top-right input {
+  width: 100%;
+  display: block;
+  height: 55rpx;
+  background: white;
+  padding-left: 38rpx;
+  box-sizing: border-box;
+}
+
+.i-top-right .placeholder {
+  font-size: 24rpx;
+}
+
+.box-wrapper .nav {
+  display: flex;
+  padding: 20rpx;
+  flex-wrap: wrap;
+  box-sizing:border-box;
+  margin-left:8rpx;
+}
+.box-wrapper .nav navigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20rpx 15rpx 0;
+}
+
+.box-wrapper .nav text {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color: #6d6d6d;
+  margin-top: 10rpx;
+}
+
+.iconfont {
+  width: 80%;
+  height: 85rpx;
+  text-align: center;
+  line-height: 85rpx;
+  background: #1ad0ff;
+  border-radius: 20rpx;
+  color: white;
+}
+
+.icon-fuzhuang {
+  background: #f71b42;
+}
+
+.icon-nongye {
+  background: #37b44c;
+}
+
+.icon-tongxun {
+  background: #4d8e6e;
+}
+
+.icon-jiaju {
+  background: #b0465d;
+}
+
+.icon-dianlishebei {
+  background: #ff9c5f;
+}
+
+.icon-jianzhu {
+  background: #464aad;
+}
+
+.icon-zhijin {
+  background: #1fbab4;
+}
+
+.icon-yiqiyibiao01 {
+  background: #a025b1;
+}
+
+.icon-huaxue {
+  background: #fabd0c;
+}
+
+.icon-richangxuncha {
+  background: #8ec63f;
+}

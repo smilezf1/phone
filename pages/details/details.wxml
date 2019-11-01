@@ -1,0 +1,4 @@
+<!--pages/details/details.wxml-->
+<view class="details">
+商家信息详情页
+</view>

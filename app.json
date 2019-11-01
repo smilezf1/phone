@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/issue/issue",
+    "pages/merchant/merchant",
+    "pages/my/my",
+    "pages/details/details",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F7444A",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  },
+  "tabBar": {
+    "selectedColor": "#F7444A",
+    "color": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "color": "#ffffff",
+        "selectedColor": "#000000",
+        "iconPath": "/static/image/index.png",
+        "selectedIconPath": "/static/image/indexSelect.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/image/my.png",
+        "selectedIconPath": "/static/image/mySelect.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

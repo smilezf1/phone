@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="index">
+  <!-- <view class="i-top">
+    <view class="i-top-left">上海市</view>
+    <view class="i-top-right">
+      <image src="/static/image/search.png" mode="widthFix" class="search"></image>
+      <input placeholder="{{placeholderHint}}" placeholder-class="placeholder" bindfocus="deletePlaceholder" bindblur="setPlaceholder"></input>
+    </view>
+  </view> -->
+  <view class="navigationBarTitle">电话黄页</view>
+  <swiper class="slider-wrapper" indicator-dots="{{true}}" interval="3000" indicator-color="#fff" indicator-active-color="#FFC43B" autoplay="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{imgList}}" wx:key>
+      <navigator  hover-class="none" url="/pages/details/details" open-type="navigate">
+        <image mode="widthFix" src="{{item.src}}" style="width:100%"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <swiper class="box-wrapper" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
+    <swiper-item class="nav">
+      <navigator class="education" url="/pages/details/details" hover-class="none" wx:for="{{navList}}" wx:key="{{item.id}}" wx:if="{{index<10}}">
+        <icon class="iconfont {{item.icon}}"></icon>
+        <text class="txt">{{item.content}}</text>
+      </navigator>
+    </swiper-item>
+    <swiper-item class="nav">
+      <navigator class="education" hover-class="none" wx:for="{{navList}}" wx:key="{{item.id}}" wx:if="{{index>=10}}">
+        <icon class="iconfont {{item.icon}}"></icon>
+        <text class="txt">{{item.content}}</text>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
