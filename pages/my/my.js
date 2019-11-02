@@ -4,44 +4,63 @@ Page({
    * 页面的初始数据
    */
   data: {
-    authWindowHidden: true
+    authWindowHidden: true,
+    nickName:"登录",
+    avatarUrl:"/static/image/avator.png"
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    //查看是否授权
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting["scope.userInfo"]) {
+          wx.getUserInfo({
+            success: res => {
+              console.log(res.userInfo);
+            }
+          })
+        } else {
+          console.log("用户没有授权")
+        }
+      }
+    })
 
+  },
+  getUserInfo(e) {
+    const _this=this;
+    let rawData = JSON.parse(e.detail.rawData);
+    let {
+      nickName,
+      avatarUrl
+    } = rawData;
+    _this.setData({
+      nickName,
+      avatarUrl
+    })
+    //同步
+    wx.setStorageSync('nickName', nickName);
+    wx.setStorageSync("avatar", avatarUrl);
   },
   login() {
     this.setData({
       authWindowHidden: false
     })
+
   },
   consent() {
     this.setData({
       authWindowHidden: true
     })
-    wx.getSetting({
-     success(res){
-       console.log(res.authSetting);
-       console.log(res.authSetting["scope.userInfo"]);
-      //  if(res.authSetting["scope.userInfo"]){
-      //   wx.getUserInfo({
-      //    success:res=>{
-      //      console.log(res);
-      //    }
-      //   })
-      //  }else{
-        
-      //  }
-     }
-    })
+
   },
   reject() {
     this.setData({
       authWindowHidden: true
     })
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

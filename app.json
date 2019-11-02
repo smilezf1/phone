@@ -6,13 +6,13 @@
     "pages/merchant/merchant",
     "pages/my/my",
     "pages/details/details",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/setting/setting"
   ],
   "window": {
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#F7444A",
-    "navigationBarTextStyle": "black",
-    "navigationStyle":"custom"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#F7444A",

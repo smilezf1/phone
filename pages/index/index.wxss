@@ -1,13 +1,6 @@
 /**index.wxss**/
 page{
   height:100%;
-  padding-top:70rpx;
-}
-.navigationBarTitle{
-  margin-bottom:25rpx;
-  color:#000;
-  padding-left:14rpx;
-  letter-spacing:6rpx;
 }
 .i-top {
   background: #f7444a;
@@ -49,20 +42,22 @@ page{
 .i-top-right .placeholder {
   font-size: 24rpx;
 }
-
+.box-wrapper{
+  height:340rpx;
+}
 .box-wrapper .nav {
   display: flex;
   padding: 20rpx;
   flex-wrap: wrap;
   box-sizing:border-box;
-  margin-left:8rpx;
+ margin:0 0 08rpx;
 }
 .box-wrapper .nav navigator {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20rpx 15rpx 0;
+  margin: 0 20rpx 10rpx 0;
 }
 
 .box-wrapper .nav text {
