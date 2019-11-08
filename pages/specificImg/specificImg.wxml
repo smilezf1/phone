@@ -1,0 +1,4 @@
+<!--pages/specificImg/specificImg.wxml-->
+<view class="specificImg">
+大图页
+</view>

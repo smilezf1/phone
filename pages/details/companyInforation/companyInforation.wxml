@@ -1,0 +1,14 @@
+<!--pages/details/companyInforation/companyInforation.wxml-->
+<view class="companyInforation">
+<view class="companyName">上海吉陶纸业有限公司</view>
+<view class="companyIntroduce">公司介绍介绍公司介绍介绍公司介绍介绍公司介绍介绍公司介绍介绍</view>
+<view class="contact">
+<view class="phone">电话：021-31266399</view>
+<view class="fax">传真:021-31266399</view>
+<view class="mobile">手机：13956522881</view>
+<view class="website">网址：www.baidu.com</view>
+<view class="mainBox">邮箱：smilezf@outlook.com</view>
+<view class="address">地址：上海市闵行区莲花南路</view>
+<view class="contact">联系人:陈先生</view>
+</view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/details/companyInforation/companyInforation.wxss */
+.companyName{
+  width:60%;
+  background:#96BAB6;
+  color:white;
+  margin:10rpx auto;
+  text-align:center;
+  font-size:34rpx;
+  padding: 10rpx 0;
+}
+.companyIntroduce{
+  border:2rpx dashed #418178;
+  margin: 0 10rpx;
+  text-indent:2rem;
+  color:#418178;
+}
+.contact{
+ width:75%;
+  background:#ECF0EF;
+  margin:20rpx auto;
+  color:#418178;
+  font-weight:600;
+  text-align:justify;
+  padding: 20rpx 0;
+}
+.contact view{
+  margin:10rpx 0;
+  text-align:center;
+}

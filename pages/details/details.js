@@ -1,20 +1,25 @@
 // pages/details/details.js
+import {http} from '../../utils/http.js';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+   imgList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const _this=this;
+    http("get","/classify",{},function(res){
+     _this.setData({
+       imgList:res
+     })
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

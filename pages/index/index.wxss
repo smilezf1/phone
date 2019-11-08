@@ -50,14 +50,14 @@ page{
   padding: 20rpx;
   flex-wrap: wrap;
   box-sizing:border-box;
- margin:0 0 08rpx;
+ margin:0 0 0 26rpx;
 }
 .box-wrapper .nav navigator {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20rpx 10rpx 0;
+  margin: 0 20rpx 14rpx 0;
 }
 
 .box-wrapper .nav text {
@@ -95,7 +95,7 @@ page{
 }
 
 .icon-dianlishebei {
-  background: #ff9c5f;
+  background:#2FC1BD;
 }
 
 .icon-jianzhu {
@@ -111,9 +111,12 @@ page{
 }
 
 .icon-huaxue {
-  background: #fabd0c;
+  background:#2FC1BD;
 }
 
 .icon-richangxuncha {
   background: #8ec63f;
+}
+.imgBox{
+  padding: 0 10rpx;
 }

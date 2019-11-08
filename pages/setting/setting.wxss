@@ -1,4 +1,0 @@
-/* pages/setting/setting.wxss */
-page{
-   padding-top:140rpx;
-}

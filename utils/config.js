@@ -1,2 +1,2 @@
-const basePath ="https://www.appi2b2b.com";
+const basePath ="http://yapi.sukaichem.com/mock/36";
 module.exports=basePath;

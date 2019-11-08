@@ -1,4 +1,4 @@
-// pages/merchant/merchant.js
+// pages/details/companyInforation/companyInforation.js
 Page({
 
   /**
@@ -12,21 +12,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function (e) {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: function (e) {
   },
 
   /**

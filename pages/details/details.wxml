@@ -1,4 +1,6 @@
-<!--pages/details/details.wxml-->
+
 <view class="details">
-商家信息详情页
+<view wx:for="{{imgList}}" wx:key class="name">
+<navigator  hover-class="none" url="/pages/details/companyInforation/companyInforation?name='{{item.name}}'">{{item.name}}</navigator>
+</view>
 </view>

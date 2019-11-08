@@ -1,19 +1,9 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+import {http} from '../../utils/http.js';
 Page({
   data: {
-    imgList: [{
-        src: "https://yanxuan.nosdn.127.net/2757140ee59e2c53de1fafba7fd876df.jpg?imageView&quality=75&thumbnail=750x0"
-      },
-      {
-        src: "https://yanxuan.nosdn.127.net/7315aafff3368de1aa4262b168518051.jpg?imageView&quality=75&thumbnail=750x0"
-      },
-      {
-        src: "https://yanxuan.nosdn.127.net/45081b3e4e78484247ce176a053bf971.jpg?imageView&quality=75&thumbnail=750x0"
-      }
-    ],
+    imgList:[],
     navList: [{
         id: 1,
         icon: "icon-dibudaohanglan",
@@ -113,12 +103,18 @@ Page({
         content: "建筑房产"
       }
 
-    ],
-    placeholderHint: "请输入帖子内容搜索"
+    ]
   },
-  onLoad: function() {},
+  onLoad: function() {
+    const _this=this;
+    http("get","/carousel",{},function(res){
+      _this.setData({
+        imgList:res
+      })
+      console.log(_this.data.imgList);
+    })
+  },
   onShareAppMessage: function() {
-
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
