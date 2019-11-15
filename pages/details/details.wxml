@@ -1,6 +1,6 @@
 
 <view class="details">
 <view wx:for="{{imgList}}" wx:key class="name">
-<navigator  hover-class="none" url="/pages/details/companyInforation/companyInforation?name='{{item.name}}'">{{item.name}}</navigator>
+<navigator  hover-class="none" url="/pages/details/companyInforation/companyInforation?name='{{item.title}}&&id={{item.id}}">{{item.title}}</navigator>
 </view>
 </view>

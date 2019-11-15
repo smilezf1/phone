@@ -9,7 +9,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#418178",
+    "navigationBarBackgroundColor":"#8CDCD6",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"

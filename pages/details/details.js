@@ -13,12 +13,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const _this=this;
-    http("get","/classify",{},function(res){
-     _this.setData({
-       imgList:res
-     })
+    wx.showLoading({
+      title:'正在加载',
     })
+    let id=options.id;
+    const _this=this;
+    wx.request({
+      url: 'http://php.ec.widiazine.cn/arvato/app/arvato_shop_api.php?i=194&r=amouse.index.amouseContacts',
+      data: {
+        pcateid:id
+      },
+      success(res) {
+        let data=res.data.list;
+        _this.setData({imgList:data});
+        wx.hideLoading();
+      }
+    })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

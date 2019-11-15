@@ -1,6 +1,6 @@
 /**index.wxss**/
-page{
-  height:100%;
+page {
+  height: 100%;
 }
 .i-top {
   background: #f7444a;
@@ -42,20 +42,22 @@ page{
 .i-top-right .placeholder {
   font-size: 24rpx;
 }
-.box-wrapper{
-  height:340rpx;
+
+.box-wrapper {
+  height: 340rpx;
 }
+
 .box-wrapper .nav {
   display: flex;
   padding: 20rpx;
   flex-wrap: wrap;
-  box-sizing:border-box;
- margin:0 0 0 26rpx;
+  box-sizing: border-box;
+  margin: 0 0 0 26rpx;
 }
+
 .box-wrapper .nav navigator {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   margin: 0 20rpx 14rpx 0;
 }
@@ -77,6 +79,9 @@ page{
   border-radius: 20rpx;
   color: white;
 }
+image{
+  width:100%;
+}
 
 .icon-fuzhuang {
   background: #f71b42;
@@ -91,11 +96,11 @@ page{
 }
 
 .icon-jiaju {
-  background: #b0465d;
+  background: #f37a1f;
 }
 
 .icon-dianlishebei {
-  background:#2FC1BD;
+  background: #2fc1bd;
 }
 
 .icon-jianzhu {
@@ -111,12 +116,13 @@ page{
 }
 
 .icon-huaxue {
-  background:#2FC1BD;
+  background: #2a3785;
 }
 
 .icon-richangxuncha {
   background: #8ec63f;
 }
-.imgBox{
+
+.imgBox {
   padding: 0 10rpx;
 }

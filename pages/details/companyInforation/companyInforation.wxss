@@ -1,29 +1,31 @@
 /* pages/details/companyInforation/companyInforation.wxss */
-.companyName{
-  width:60%;
-  background:#96BAB6;
-  color:white;
-  margin:10rpx auto;
-  text-align:center;
-  font-size:34rpx;
+.companyInforation{
+  border-top:1rpx solid #eee;
+  padding:0 10px;
+}
+.companyName {
+  /* margin: 10rpx auto; */
+  margin:10rpx 0 0 0;
+  text-align: center;
+  font-size: 36rpx;
   padding: 10rpx 0;
+  color:#333;
+  font-weight:550;
 }
-.companyIntroduce{
-  border:2rpx dashed #418178;
+
+.companyIntroduce {
   margin: 0 10rpx;
-  text-indent:2rem;
-  color:#418178;
+  font-size:30rpx;
 }
-.contact{
- width:75%;
-  background:#ECF0EF;
-  margin:20rpx auto;
-  color:#418178;
-  font-weight:600;
-  text-align:justify;
+
+.detailMessage {
+  width:80%;
+  margin: 20rpx auto;
+  font-weight: 600;
   padding: 20rpx 0;
 }
-.contact view{
-  margin:10rpx 0;
-  text-align:center;
+.detailMessage view {
+  margin: 10rpx 0;
+  font-weight:normal;
+  text-align:justify;
 }

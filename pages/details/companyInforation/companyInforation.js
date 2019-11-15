@@ -5,61 +5,78 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    listItem: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-   
+  onLoad: function(options) {
+    wx.showLoading({
+      title: '正在加载',
+    })
+    const _this = this;
+    let id = options.id;
+    wx.request({
+      url: 'http://php.ec.widiazine.cn/arvato/app/arvato_shop_api.php?i=194&r=amouse.index.getDetail',
+      data: {
+        id
+      },
+      success(res) {
+        let data = res.data.detail;
+        _this.setData({
+          listItem: data
+        })
+        wx.hideLoading();
+      }
+    })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function (e) {
+  onReady: function(e) {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function (e) {
-  },
+  onShow: function(e) {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
