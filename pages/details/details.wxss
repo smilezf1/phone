@@ -1,7 +1,7 @@
 /* pages/details/details.wxss */
 .name{
   padding:30rpx 0rpx;
-  margin:0 20rpx;
+  margin:0 25rpx;
   border-bottom:1rpx solid #E9E9E9;
   font-weight:600;
 }

@@ -18,18 +18,10 @@ Page({
     })
     let id=options.id;
     const _this=this;
-    wx.request({
-      url: 'http://php.ec.widiazine.cn/arvato/app/arvato_shop_api.php?i=194&r=amouse.index.amouseContacts',
-      data: {
-        pcateid:id
-      },
-      success(res) {
-        let data=res.data.list;
-        _this.setData({imgList:data});
-        wx.hideLoading();
-      }
-    })
-    
+    http("get", "amouse.index.amouseContacts", { pcateid: id},function(res){
+      _this.setData({imgList:res.list})
+      wx.hideLoading();
+    })  
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

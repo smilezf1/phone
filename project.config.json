@@ -156,6 +156,20 @@
 					"id": -1,
 					"name": "pages/details/details",
 					"pathName": "pages/details/details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/specificImg/specificImg",
+					"pathName": "pages/specificImg/specificImg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/details/companyInforation/companyInforation",
+					"pathName": "pages/details/companyInforation/companyInforation",
 					"scene": null
 				}
 			]

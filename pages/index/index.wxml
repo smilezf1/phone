@@ -2,8 +2,8 @@
 <view class="index">
   <!-- 顶部轮播图 -->
   <swiper class="slider-wrapper" indicator-dots="{{true}}" interval="3000" indicator-color="#fff" indicator-active-color="#8CDCD6" autoplay="{{true}}" circular="{{true}}">
-    <swiper-item wx:for="{{imgList}}" wx:key>
-      <navigator hover-class="none" url="/pages/specificImg/specificImg">
+    <swiper-item wx:for="{{ bannerImgList}}" wx:key>
+      <navigator hover-class="none" url="/pages/specificImg/specificImg?id={{item.id}}">
         <image mode="widthFix" src="{{item.images}}" style="width:100%"></image>
       </navigator>
     </swiper-item>
@@ -12,14 +12,14 @@
   <swiper class="box-wrapper" circular="{{true}}" indicator-dots="{{true}}" indicator-color="#eee" indicator-active-color="#8CDCD6" autoplay="{{true}}">
     <swiper-item class="nav" wx:for="{{navListItem}}" wx:key>
       <navigator class="navitem" hover-class="none" url="/pages/details/details?id={{item.id}}" wx:for="{{item}}" wx:key>
-        <image mode="widthFix" src="{{item.thumb}}" style="width:45px"></image>
+        <image mode="widthFix" src="{{item.thumb}}" style="width:80rpx;border-radius:6rpx;"></image>
         <text class="txt">{{item.name}}</text>
       </navigator>
     </swiper-item>
   </swiper>
   <view class="imgBox">
-    <navigator hover-class="none">
-      <image wx:for="{{imgList}}" wx:key src="{{item.imgurl}}" mode="widthFix"></image>
+    <navigator hover-class="none" wx:for="{{imgList}}" wx:key="{{item.id}}" url="/pages/specificImg/specificImg?id={{item.id}}">
+      <image src="{{item.images}}" mode="widthFix"></image>
     </navigator>
   </view>
 </view>

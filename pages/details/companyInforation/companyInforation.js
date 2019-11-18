@@ -1,4 +1,5 @@
 // pages/details/companyInforation/companyInforation.js
+import {http} from '../../../utils/http.js'
 Page({
 
   /**
@@ -17,20 +18,10 @@ Page({
     })
     const _this = this;
     let id = options.id;
-    wx.request({
-      url: 'http://php.ec.widiazine.cn/arvato/app/arvato_shop_api.php?i=194&r=amouse.index.getDetail',
-      data: {
-        id
-      },
-      success(res) {
-        let data = res.data.detail;
-        _this.setData({
-          listItem: data
-        })
-        wx.hideLoading();
-      }
+    http("get","amouse.index.getDetail",{id},function(res){
+      _this.setData({listItem:res.detail})
+      wx.hideLoading();
     })
-
   },
 
   /**

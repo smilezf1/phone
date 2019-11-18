@@ -5,9 +5,10 @@ import {
 } from '../../utils/http.js';
 Page({
   data: {
-    imgList: [],
+    bannerImgList: [],
     navList: [],
-    navListItem: []
+    navListItem: [],
+    imgList:[]
   },
   onLoad: function() {
     const _this = this;
@@ -18,10 +19,15 @@ Page({
       _this.chooseData();
     })
     http("get","amouse.index.banner",{},function(res){
-      console.log(res.banner);
       let data=res.banner;
       _this.setData({
-        imgList:data
+        bannerImgList:data
+      })
+    })
+    http("get","amouse.index.getList",{},function(res){
+      let data=res.list;
+      _this.setData({
+         imgList:data
       })
     })
   },
@@ -45,15 +51,6 @@ Page({
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
   },
-  deletePlaceholder() {
-    this.setData({
-      placeholderHint: ""
-    })
-  },
-  setPlaceholder() {
-    this.setData({
-      placeholderHint: "请输入帖子内容搜索"
-    })
-  }
+ 
 
 })

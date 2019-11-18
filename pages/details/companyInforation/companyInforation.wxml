@@ -2,9 +2,8 @@
 <view class="companyInforation">
   <view class="companyName">{{listItem.title}}</view>
   <rich-text class="companyIntroduce" nodes="{{listItem.info}}"></rich-text>
-  <view class="detailMessage">
-    <view class="phone" hidden="{{!listItem.mobile1}}">电话:{{listItem.mobile1}}</view>
-    <view class="mobile" hidden="{{!listItem.mobile2}}">手机:{{listItem.mobile2}}</view>
+  <view class="detailMessage" hidden="{{!(listItem.mobile1||listItem.outlink||listItem.place)}}">
+    <view class="phone" hidden="{{!listItem.mobile1}}">联系方式:{{listItem.mobile1}}</view>
     <view class="website" hidden="{{!listItem.outlink}}">网址:{{listItem.outlink}}</view>
     <view class="address" hidden="{{!listItem.place}}">地址:{{listItem.place}}</view>
   </view>

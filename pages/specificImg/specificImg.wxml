@@ -1,4 +1,9 @@
 <!--pages/specificImg/specificImg.wxml-->
 <view class="specificImg">
-大图页
+  <view class="title">{{listItem.title}}</view>
+  <rich-text class="content" nodes="{{listItem.info}}"></rich-text>
+  <view class="contactMessage" hidden="{{!(listItem.mobile1||listItem.place)}}">
+    <view class="phone" hidden="{{!listItem.mobile1}}">联系方式{{listItem.mobile1}}</view>
+    <view class="address" hidden="{{!listItem.place}}">地址：{{listItem.place}}</view>
+  </view>
 </view>
